@@ -1,0 +1,72 @@
+.logo {
+    width: 100px;
+}
+
+.contact {
+    padding-top: 10px;
+}
+
+.bgr {
+    background-color: #1E2125;
+    margin-bottom: 50px;
+}
+
+.video {
+    display: flex;
+    justify-content: center; /* Tengah secara horizontal */
+    align-items: center;     /* Tengah secara vertikal */
+    padding-left: 20%;
+}
+
+/* Event */
+.wedding-section {
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  margin-top: 120px;
+}
+
+.wedding-section .wedding-title {
+  color: #1E2125;
+  margin-bottom: 20px;
+}
+
+.wedding-section .wedding-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.wedding-section .wedding-image {
+  width: 70%;
+  max-width: 70%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.wedding-section .wedding-btn {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  background-color: #1E2125;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.wedding-section .wedding-btn:hover {
+  background-color: #1b3654;
+}
+
+
+
+
+
+
+
+
+
