@@ -5,16 +5,14 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-body{
+body {
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-image: url('img/login.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .wrapper{
   position: relative;
   max-width: 430px;

@@ -8,24 +8,16 @@ if (!isset($_SESSION["admin_logged_in"])) {
     exit;
 }
 
-// Cek apakah sudah login
-if (!isset($_SESSION["admin_logged_in"])) {
-    header("Location: login.php");
-    exit;
-}
-
-// Hitung durasi sejak login (dalam detik)
-$max_login_time = 10 * 60; // 10 menit
+// Durasi login
+$max_login_time = 10 * 60;
 $now = time();
 
 if (isset($_SESSION["login_time"]) && ($now - $_SESSION["login_time"]) > $max_login_time) {
-    // Lewat 10 menit, logout otomatis
     session_unset();
     session_destroy();
     header("Location: login.php?timeout=1");
     exit;
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -36,12 +28,19 @@ if (isset($_SESSION["login_time"]) && ($now - $_SESSION["login_time"]) > $max_lo
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body class="bg-light">
+  <?php if (isset($_COOKIE["nama_user"])): ?>
+    <script>
+      alert("Selamat datang kembali, <?= htmlspecialchars($_COOKIE["nama_user"]) ?>!");
+    </script>
+    <?php setcookie("nama_user", "", time() - 3600, "/"); // hapus cookie ?>
+  <?php endif; ?>
   <div class="container mt-5">
     <h2 class="mb-4 text-center">Daftar Reservasi</h2>
 
     <?php if (count($data) === 0): ?>
       <div class="alert alert-info text-center">Belum ada data reservasi.</div>
     <?php else: ?>
+      
       <table class="table table-bordered table-striped">
         <thead class="table-dark">
           <tr>
@@ -85,8 +84,8 @@ if (isset($_SESSION["login_time"]) && ($now - $_SESSION["login_time"]) > $max_lo
           <button type="submit" class="btn btn-danger">Logout</button>
         </form>
     <?php endif; ?>
-
     <a href="resevation.php" class="btn btn-secondary mt-3">Kembali ke Form Reservasi</a>
   </div>
+</script>
 </body>
 </html>

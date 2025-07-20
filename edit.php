@@ -47,6 +47,7 @@ if (!isset($_SESSION["admin_logged_in"])) {
 <body class="bg-light">
   <div class="container mt-5">
     <h2>Edit Reservasi</h2>
+    <div class="form-container fade-in">
     <form method="post">
       <div class="mb-3">
         <label>Nama Lengkap</label>
@@ -89,6 +90,7 @@ if (!isset($_SESSION["admin_logged_in"])) {
       <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
       <a href="reservation-list.php" class="btn btn-secondary">Batal</a>
     </form>
+    </div>
   </div>
 </body>
 </html>

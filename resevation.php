@@ -96,6 +96,7 @@
         <?php if (isset($_GET['success'])): ?>
           <div class="alert alert-success text-center">Reservasi berhasil disimpan!</div>
         <?php endif; ?>
+        <div class="form-container fade-in">
         <form method="post">
           <div class="mb-3">
             <label for="fullName" class="form-label">Full Name</label>
@@ -138,9 +139,11 @@
           </div>
           <button type="submit" class="btn custom-btn w-100">Send Reservation</button>
         </form>
+        </div>
       </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+
   </body>
   </html>
