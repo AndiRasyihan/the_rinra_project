@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
           </div>
           <div class="policy form-check mb-3">
             <input type="checkbox" class="form-check-input" id="terms" required />
-            <label class="form-check-label" for="terms"> I accept all terms & conditions</label>
+            <label class="form-check-label" for="terms">I accept all terms & conditions</label>
           </div>
           <div class="input-box button">
             <input type="submit" value="Login Now" />

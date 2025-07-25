@@ -1,8 +1,8 @@
 <?php
 $host = '127.0.0.1';
-$db   = 'hotel';  // Sesuaikan dengan nama database kamu
+$db   = 'hotel';  
 $user = 'root';
-$pass = '';              // Biarkan kosong jika belum ada password
+$pass = '';              
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";

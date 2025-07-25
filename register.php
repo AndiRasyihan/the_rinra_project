@@ -20,7 +20,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $password = $_POST["password"] ?? '';
     $confirm_password = $_POST["confirm_password"] ?? '';
 
-    // Validasi input
     if (empty($email) || empty($password) || empty($confirm_password)) {
         $error = "Semua field harus diisi!";
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -30,7 +29,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } elseif ($password !== $confirm_password) {
         $error = "Password dan konfirmasi password tidak sama!";
     } else {
-        // Cek apakah email sudah terdaftar
         $stmt = $pdo->prepare("SELECT * FROM users WHERE email = ?");
         $stmt->execute([$email]);
         $existing_user = $stmt->fetch();
@@ -38,14 +36,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($existing_user) {
             $error = "Email sudah terdaftar!";
         } else {
-            // Hash password dan simpan ke database
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
             
             try {
                 $stmt = $pdo->prepare("INSERT INTO users (email, password) VALUES (?, ?)");
                 $stmt->execute([$email, $hashed_password]);
                 
-                // Redirect ke login dengan pesan sukses
                 header("Location: login.php?registered=1");
                 exit;
             } catch (PDOException $e) {
@@ -60,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Register - The Rinra</title>
   <link rel="icon" href="img/logo2.png" type="image/x-icon" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />

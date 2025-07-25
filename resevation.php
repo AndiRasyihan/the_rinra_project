@@ -55,7 +55,7 @@
       }
 
       .custom-btn:hover {
-        background-color: #333;
+        background-color: rgb(133, 133, 133);
         border-color: #333;
       }
 
@@ -67,7 +67,9 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top mb-5">
           <div class="container">
             <a class="navbar-brand" href="https://therinra.com/"><img src="img/Logo1.png" class="logo" alt=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+            aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
