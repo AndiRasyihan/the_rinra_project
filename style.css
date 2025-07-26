@@ -72,13 +72,83 @@
   font-size: 18px;
   color: white;  
 }
+
+.garis-kiri {
+  height: 3px;
+  width: 70%;
+  background-color: #A2834A;
+  margin: 1rem 0;
+}
+
+.garis-kanan {
+  height: 3px; width: 70%;
+  background-color: #A2834A;
+  margin: 1rem 0 1rem auto;
+ }
+
+.about-us {
+  color: #A2834A;
+  font-size: 30px
+}
+
+.sabout {
+  width: 60px;
+  border: 2px solid #A2834A;
+  margin-left: 0;
+}
 /* Media query untuk layar kecil (HP) */
 @media only screen and (max-width: 600px) {
   body {
-    font-size: 14px;
+    font-size: 15px;
     padding: 10px;
   }
 
+  p {
+    font-size: 14px;
+  }
+
+  b {
+    font-size: 24px;
+  }
+
+  .facility-title {
+  font-size: 24px;
+  color: #A2834A;
+  margin-top: 10px;
+  }
+
+  .facility-text {
+  font-size: 14px;
+  color: white;  
+  }
+
+  .garis-kiri {
+  height: 3px;
+  width: 70%;
+  background-color: #A2834A;
+  margin: 1rem auto;
+  }
+
+  .garis-kanan {
+  height: 3px; width: 70%;
+  background-color: #A2834A;
+  margin: 1rem auto;
+  }
+  
+  .about-us {
+    color: #A2834A;
+    font-size: 24px;
+  }
+  
+  .sabout {
+  width: 60px;
+  border: 2px solid #A2834A;
+  margin: 1rem auto;
+  }
+
+  .logo {
+    width: 75px;
+  }
   .form-group,
   .container {
     width: 100%;
